@@ -1,4 +1,4 @@
-# Collections Examples, Noah Mulder, v0.1d
+# Collections Examples, Noah Mulder, v0.2a
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS US TO DUPLICATE VALUES
 breakfast_foods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -28,3 +28,22 @@ class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 #print(breakfast_foods[2])
 #print(test_scores[2])
 #print(class_gpa[2])
+
+# Changing Items in a List
+#breakfast_foods[0] = "Sausage"
+#test_scores[0] = "97"
+#class_gpa[0] = 3.57
+#print(breakfast_foods[0])
+#print(test_scores[0])
+#print(class_gpa[0])
+#print(breakfast_foods)
+#print(test_scores)
+#print(class_gpa)
+
+# Pause -- WYOC -- Change 5th Element
+breakfast_foods[4] = "Bagel"
+test_scores[4] = 45
+class_gpa[4] = 2.46
+print(breakfast_foods)
+print(test_scores)
+print(class_gpa)
