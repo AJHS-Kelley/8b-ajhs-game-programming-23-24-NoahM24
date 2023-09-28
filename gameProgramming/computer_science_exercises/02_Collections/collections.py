@@ -1,4 +1,4 @@
-# Collections Examples, Noah Mulder, v0.1c
+# Collections Examples, Noah Mulder, v0.1d
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS US TO DUPLICATE VALUES
 breakfast_foods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -23,3 +23,8 @@ class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 #print(breakfast_foods[-1])
 #print(test_scores[-1])
 #print(class_gpa[-1])
+
+# Pause -- WYOC -- Accessing the 3rd Element in Each List
+#print(breakfast_foods[2])
+#print(test_scores[2])
+#print(class_gpa[2])
