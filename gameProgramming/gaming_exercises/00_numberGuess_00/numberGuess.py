@@ -18,7 +18,7 @@
 
 import random # Import the random module to our code.
 import time 
-
+# All code works as expected, well done! 
 #DECLARATIONS
 secret_number = -1
 player_guess = -1
