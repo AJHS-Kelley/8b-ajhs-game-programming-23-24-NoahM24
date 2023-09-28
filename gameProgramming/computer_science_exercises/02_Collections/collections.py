@@ -1,4 +1,4 @@
-# Collections Examples, Noah Mulder, v0.2a
+# Collections Examples, Noah Mulder, v0.2b
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS US TO DUPLICATE VALUES
 breakfast_foods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -25,6 +25,9 @@ class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 #print(class_gpa[-1])
 
 # Pause -- WYOC -- Accessing the 3rd Element in Each List
+#print(breakfast_foods[3])
+#print(test_scores[3])
+#print(class_gpa[3])
 #print(breakfast_foods[2])
 #print(test_scores[2])
 #print(class_gpa[2])
@@ -41,9 +44,44 @@ class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 #print(class_gpa)
 
 # Pause -- WYOC -- Change 5th Element
-breakfast_foods[4] = "Bagel"
-test_scores[4] = 45
-class_gpa[4] = 2.46
+#breakfast_foods[5] = "paper"
+#test_scores[5] = 90
+#class_gpa[5] = 4.44
+#breakfast_foods[4] = "Bagel"
+#test_scores[4] = 45
+#class_gpa[4] = 2.46
+#print(breakfast_foods)
+#print(test_scores)
+#print(class_gpa)
+
+# Adding and Inserting Items to a List
+# .append() adds an item to the END of a list.
+#breakfast_foods.append("hash browns")
+#print(breakfast_foods)
+#test_scores.append(99)
+#print(test_scores)
+#class_gpa.append(1.99)
+#print(class_gpa)
+
+# .insert() allows you to place an item at a specific index in the list
+#breakfast_foods.insert(3, "Parfait")
+#print(breakfast_foods)
+#test_scores.insert(3, 55)
+#print(test_scores)
+#class_gpa.insert(3, 0.0)
+#print(class_gpa)
+
+#PAUSE -- WYOC -- .append() another item in each list. .insert an item at index 5 in each list
+#breakfast_foods.append("sabage")
+#print(breakfast_foods)
+#test_scores.append(1)
+#print(test_scores)
+#class_gpa.append(1.12)
+#print(class_gpa)
+
+breakfast_foods.append("honey bun")
 print(breakfast_foods)
+test_scores.append(100)
 print(test_scores)
+class_gpa.append(4.0)
 print(class_gpa)
