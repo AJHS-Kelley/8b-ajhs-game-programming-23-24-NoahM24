@@ -1,4 +1,4 @@
-# Collections Examples, Noah Mulder, v0.2b
+# Collections Examples, Noah Mulder, v0.2c
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS US TO DUPLICATE VALUES
 breakfast_foods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -79,9 +79,45 @@ class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 #class_gpa.append(1.12)
 #print(class_gpa)
 
-breakfast_foods.append("honey bun")
-print(breakfast_foods)
-test_scores.append(100)
-print(test_scores)
-class_gpa.append(4.0)
-print(class_gpa)
+#breakfast_foods.append("honey bun")
+#print(breakfast_foods)
+#test_scores.append(100)
+#print(test_scores)
+#class_gpa.append(4.0)
+#print(class_gpa)
+
+# Deleting Items from a List
+# Use .remove() to remove a specific item from the list
+#breakfast_foods.remove("Waffles")
+#print(breakfast_foods)
+#test_scores.remove(100)
+#print(test_scores)
+#class_gpa.remove(2.25)
+#print(class_gpa)
+
+# To delete using the index value we use .pop()
+#breakfast_foods.pop(4)
+#print(breakfast_foods)
+#test_scores.pop(4)
+#print(test_scores)
+#class_gpa.pop(4)
+#print(class_gpa)
+
+# PAUSE - WYOC -- .pop() te 2nd element from each list. .remove() any item from the list
+#breakfast_foods.remove("Pancakes")
+#breakfast_foods.pop(1)
+#print(breakfast_foods)
+#test_scores.remove(95)
+#test_scores.pop(1)
+#print(test_scores)
+#class_gpa.remove(3.14)
+#class_gpa.pop(1)
+#print(class_gpa)
+
+#breakfast_foods.remove("Bacon")
+#print(breakfast_foods)
+#test_scores.remove(15)
+#print(test_scores)
+#class_gpa.remove(0.99)
+#print(class_gpa)
+
