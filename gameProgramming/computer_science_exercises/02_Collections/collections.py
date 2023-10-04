@@ -1,4 +1,4 @@
-# Collections Examples, Noah Mulder, v0.2c
+# Collections Examples, Noah Mulder, v0.3a
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS US TO DUPLICATE VALUES
 breakfast_foods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -121,3 +121,7 @@ class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 #class_gpa.remove(0.99)
 #print(class_gpa)
 
+# Deterimine List Length
+print(f"There are {len(breakfast_foods)} items in the breakfastfoods list.")
+print(f"There are {len(class_gpa)} items in the classgpa list.")
+print(f"There are {len(test_scores)} items in the testscores list.")
