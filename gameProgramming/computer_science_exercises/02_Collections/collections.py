@@ -1,4 +1,4 @@
-# Collections Examples, Noah Mulder, v0.3a
+# Collections Examples, Noah Mulder, v0.4a
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS US TO DUPLICATE VALUES
 breakfast_foods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -122,6 +122,18 @@ class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 #print(class_gpa)
 
 # Deterimine List Length
-print(f"There are {len(breakfast_foods)} items in the breakfastfoods list.")
-print(f"There are {len(class_gpa)} items in the classgpa list.")
-print(f"There are {len(test_scores)} items in the testscores list.")
+#print(f"There are {len(breakfast_foods)} items in the breakfast_foods list.")
+#print(f"There are {len(class_gpa)} items in the class_gpa list.")
+#print(f"There are {len(test_scores)} items in the test_scores list.")
+
+# List Methods -- Functions for working with lists
+# Sorting Lists -- Alphanumerical -- Ascending -- Capital Letters before Lower Case Letters
+print(f"The original breakfast_foods list is {breakfast_foods}.")
+breakfast_foods.sort()
+print(f"The sorted breakfast_foods list is {breakfast_foods}.")
+print(f"The original test_scores list is {test_scores}.")
+test_scores.sort()
+print(f"The sorted test_scores list is {test_scores}.")
+print(f"The original class_gpa list is {class_gpa}.")
+class_gpa.sort()
+print(f"The sorted class_gpa list is {class_gpa}.")
