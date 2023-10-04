@@ -1,4 +1,4 @@
-# Collections Examples, Noah Mulder, v0.4c
+# Collections Examples, Noah Mulder, v0.5a
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS US TO DUPLICATE VALUES
 #breakfast_foods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -173,3 +173,8 @@ class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25, 2.25]
 #print(f" The test_scores list is {test_scores}")
 #class_gpa.clear()
 #print(f" The class_gpa list is {class_gpa}")
+
+# Common Bugs -- Index Out of Range
+print(f"The last item in the list is {breakfast_foods[4]}.")
+
+print(f"The last item in the testscores list is {test_scores[len(test_scores) - 1]}")
