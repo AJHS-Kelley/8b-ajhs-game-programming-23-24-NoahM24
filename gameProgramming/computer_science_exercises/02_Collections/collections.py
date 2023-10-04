@@ -1,4 +1,4 @@
-# Collections Examples, Noah Mulder, v0.4b
+# Collections Examples, Noah Mulder, v0.4c
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS US TO DUPLICATE VALUES
 #breakfast_foods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -143,10 +143,10 @@ test_scores = [95, 100, 25, 15, 27, 35, 25]
 class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25, 2.25]
 
 # .count() will return the number of times a value appears in a list
-num_waffles = breakfast_foods.count("Waffles")
-print(f"There are {num_waffles} Waffles in the list.")
-num_bacon = breakfast_foods.count("Bacon")
-print(f"There are {num_bacon} Bacon in the list.")
+#num_waffles = breakfast_foods.count("Waffles")
+#print(f"There are {num_waffles} Waffles in the list.")
+#num_bacon = breakfast_foods.count("Bacon")
+#print(f"There are {num_bacon} Bacon in the list.")
 # Pause -- WYOC -- Use .count() to count for a single item in the list and any multiple items. Use testscores and classgpa
 #num_classgpa = class_gpa.count(3.14)
 #print(f"There are {num_classgpa} of the gpa, 3.14")
@@ -157,11 +157,19 @@ print(f"There are {num_bacon} Bacon in the list.")
 #num_testscores = test_scores.count(25)
 #print(f"There are {num_testscores} of the score, 25")
 
-test_count = test_scores.count(100)
-print(f"There was {test_count} perfect 100 scores.")
-test_count25 = test_scores.count(25)
-print(f"There was {test_count25} 25 scores.")
-gpa_count = class_gpa.count(0.99)
-print(f"There is {gpa_count} GPA lower than 1.0")
-gpa_countrepeat = class_gpa.count(2.25)
-print(f"There is {gpa_countrepeat} GPA equal to 2.25")
+#test_count = test_scores.count(100)
+#print(f"There was {test_count} perfect 100 scores.")
+#test_count25 = test_scores.count(25)
+#print(f"There was {test_count25} 25 scores.")
+#gpa_count = class_gpa.count(0.99)
+#print(f"There is {gpa_count} GPA lower than 1.0")
+#gpa_countrepeat = class_gpa.count(2.25)
+#print(f"There is {gpa_countrepeat} GPA equal to 2.25")
+
+# Deleting All Contents of a List -- .clear()
+#breakfast_foods.clear()
+#print(f" The breakfast foods list is {breakfast_foods}")
+#test_scores.clear()
+#print(f" The test_scores list is {test_scores}")
+#class_gpa.clear()
+#print(f" The class_gpa list is {class_gpa}")
