@@ -1,13 +1,13 @@
-# Collections Examples, Noah Mulder, v0.4a
+# Collections Examples, Noah Mulder, v0.4b
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS US TO DUPLICATE VALUES
-breakfast_foods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
+#breakfast_foods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
 # Each item on the list is known as an ELEMENT
 # The position in the list for each is the INDEX
 # The element "Bacon" is at index 0
 # Python Only: index -1 it is the last item on the list
-test_scores = [95, 100, 25, 15, 27, 35]
-class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
+#test_scores = [95, 100, 25, 15, 27, 35]
+#class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 
 # Printing Contents of an List
 #print(breakfast_foods)
@@ -128,12 +128,40 @@ class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 
 # List Methods -- Functions for working with lists
 # Sorting Lists -- Alphanumerical -- Ascending -- Capital Letters before Lower Case Letters
-print(f"The original breakfast_foods list is {breakfast_foods}.")
-breakfast_foods.sort()
-print(f"The sorted breakfast_foods list is {breakfast_foods}.")
-print(f"The original test_scores list is {test_scores}.")
-test_scores.sort()
-print(f"The sorted test_scores list is {test_scores}.")
-print(f"The original class_gpa list is {class_gpa}.")
-class_gpa.sort()
-print(f"The sorted class_gpa list is {class_gpa}.")
+#print(f"The original breakfast_foods list is {breakfast_foods}.")
+#breakfast_foods.sort()
+#print(f"The sorted breakfast_foods list is {breakfast_foods}.")
+#print(f"The original test_scores list is {test_scores}.")
+#test_scores.sort()
+#print(f"The sorted test_scores list is {test_scores}.")
+#print(f"The original class_gpa list is {class_gpa}.")
+#class_gpa.sort()
+#print(f"The sorted class_gpa list is {class_gpa}.")
+
+breakfast_foods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk", "Bacon"]
+test_scores = [95, 100, 25, 15, 27, 35, 25]
+class_gpa = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25, 2.25]
+
+# .count() will return the number of times a value appears in a list
+num_waffles = breakfast_foods.count("Waffles")
+print(f"There are {num_waffles} Waffles in the list.")
+num_bacon = breakfast_foods.count("Bacon")
+print(f"There are {num_bacon} Bacon in the list.")
+# Pause -- WYOC -- Use .count() to count for a single item in the list and any multiple items. Use testscores and classgpa
+#num_classgpa = class_gpa.count(3.14)
+#print(f"There are {num_classgpa} of the gpa, 3.14")
+#num_classgpa = class_gpa.count(2.25)
+#print(f"There are {num_classgpa} of the gpa, 2.25")
+#num_testscores = test_scores.count(100)
+#print(f"There are {num_testscores} of the score, 100")
+#num_testscores = test_scores.count(25)
+#print(f"There are {num_testscores} of the score, 25")
+
+test_count = test_scores.count(100)
+print(f"There was {test_count} perfect 100 scores.")
+test_count25 = test_scores.count(25)
+print(f"There was {test_count25} 25 scores.")
+gpa_count = class_gpa.count(0.99)
+print(f"There is {gpa_count} GPA lower than 1.0")
+gpa_countrepeat = class_gpa.count(2.25)
+print(f"There is {gpa_countrepeat} GPA equal to 2.25")
