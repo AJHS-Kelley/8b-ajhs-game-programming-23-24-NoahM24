@@ -1,4 +1,4 @@
-# collection_game v0.4
+# collection_game v0.5
 # Create a list variable named playerInventory.
 # Use a while loop to allow the user to enter 10 items into the player inventory. 
 # Sort the inventory.
@@ -6,7 +6,6 @@
 
 #player_inventory = []
 #item_chosen = ""
-weapon_list = []
 
 #while len(player_inventory) < 10:
     #item_chosen = input("What item would you like to add?\n")
@@ -29,3 +28,17 @@ weapon_list = []
 #player_inventory.sort()
 #print(f"You have {player_inventory} in your iventory.")
 
+#door_keys = [
+    "red"
+    "green"
+    "yellow"
+    "gold"
+    "blue"
+]
+
+#key = input("Which color key do you need to unlock the door?\n")
+
+#if key in door_keys:
+    #print("You have the correct key! The door unlocks.\n")
+#else:
+    #print("You do not have that key. The door remains locked.\n")
