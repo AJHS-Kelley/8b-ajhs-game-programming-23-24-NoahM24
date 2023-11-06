@@ -1,4 +1,4 @@
-# Hangman Game ny Noah Mulder, v0.5
+# Hangman Game ny Noah Mulder, v0.100
 import random
 #words = 'Hangman Silver Gold Diamond Platinum Key Keyboard Gorilla Game Program Pow Apple Banana Chloroplast Job Ask Mitochondria Acid Poison Name Help Suffer Watch Lob Lose Corn Cob Same Nine One'.split()
 # DICTIONARY VERSION
@@ -47,13 +47,30 @@ HANGMAN_BOARD = ['''
     O   |
    /|\  |
    / \  |       
+    ========''', '''
+    +---+
+    O   |
+  o-|-o |
+   / \  |       
+    ========''', '''
+    +---+
+    O   |
+  o-|-o |
+   / \  |
+  o   o |   
     ========''']
 
 # Pick Word from List
-def get_randomword(word_list): # Return a random word from the list.
-    word_index = random.randint(0, len(word_list) - 1)
-    # len(list_name) - 1 is EXTREMELY COMMON FOR WORKING WITH LISTS.
-    return word_list[word_index]
+# def get_randomword(word_list): # Return a random word from the list.
+#     word_index = random.randint(0, len(word_list) - 1)
+#     # len(list_name) - 1 is EXTREMELY COMMON FOR WORKING WITH LISTS.
+#     return word_list[word_index]
+
+# Pick Word from Dictionary
+def get_randomword(word_dict): # Return a random word from the list.
+    word_key = random.choice(list(word_dict.keys()))
+    word_index = random.randint(0, len(word_dict[word_key] - 1))
+    return [word_dict[word_key][word_index], word_key]
 
 def display_board(missed_letters, correct_letters, secret_word):
     print(HANGMAN_BOARD[len(missed_letters)])
@@ -94,14 +111,30 @@ def play_again():
     return input().lower().startswith('y')
 
 # Introduce the Game
-print('Welcome to the Game by Noah.')
+print('Welcome to the Hangman Game by Noah.')
+
+# Choose Difficulty
+difficulty = 'X'
+while difficulty not in 'EMH':
+    print('Please Choose Easy, Medium, or Hard. Type the first letter then press enter.\n')
+    difficulty = input().upper()
+if difficulty == 'M': # Medium
+    del HANGMAN_BOARD[8]
+    del HANGMAN_BOARD[7]
+if difficulty == 'H': # Hard
+    del HANGMAN_BOARD[8]
+    del HANGMAN_BOARD[7]
+    del HANGMAN_BOARD[5]
+    del HANGMAN_BOARD[3]
+
 missed_letters = ''
 correct_letters = ''
-secret_word = get_randomword(words)
+secret_word, secret_set = get_randomword(words)
 game_isdone = False
 
 # Main Game Loop
 while True:
+    print('The secret word is from the ' + secret_set + 'category.\n')
     display_board(missed_letters, correct_letters, secret_word)
 
     guess = get_guess(missed_letters + correct_letters)
@@ -115,15 +148,19 @@ while True:
             if secret_word[i] not in correct_letters:
                 found_allletters = False
                 break
-            if found_allletters : # if True
-                print('Imagine Winning, Could not be Me.')
-                print('The secret word was' + secret_word)
-                game_isdone = True
+        if found_allletters : # if True
+            print('Imagine Winning, Could not be Me.')
+            print('The secret word was' + secret_word)
+            game_isdone = True
 
     if game_isdone:
         if play_again():
             missed_letters = ''
             correct_letters = ''
+            game_isdone = False
+            secret_word, secret_set = get_randomword(words)
+        else:
+            break
 
 # i = 0
 # while i < 50:
