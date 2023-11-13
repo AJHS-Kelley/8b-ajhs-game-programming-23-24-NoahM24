@@ -1,4 +1,4 @@
-# Example Game Functions Project, Noah Mulder, v3
+# Example Game Functions Project, Noah Mulder, v4
 import random
 
 player_hp = 100
@@ -8,6 +8,7 @@ cpu_name = ""
 attack_potency = 0.0 # Max attack potency is 5
 elemental_attack = None # Elemenatl attacks are Fire, Ice, Lightning
 cpu_namelist = ["Rodrick", "Grag", "Tyu", "Boder", "Poly"]
+attack_type = ""
 
 player_name = input("What is your characters name?\n")
 
@@ -29,4 +30,14 @@ def function_four(param1, param2):
     pass
 
 while player_hp or cpu_hp != 0:
-    pass
+    attack_type = input("What type of attack would you like to use? Light or Heavy?\n")
+    if "light" or "Light":
+        attack_potency = random.randint(0.0, 5.0)
+        health_taken = 5 * {attack_potency}
+        cpu_hp -= health_taken
+    elif "heavy" or "Heavy":
+        attack_potency = random.randint(0.0, 5.0)
+        health_taken = 10 * {attack_potency}
+        cpu_hp -= health_taken
+    else:
+        print("Choose of the two attack types.")
