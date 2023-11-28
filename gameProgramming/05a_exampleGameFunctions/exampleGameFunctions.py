@@ -1,4 +1,4 @@
-# Example Game Functions Project, Noah Mulder, v6
+# Example Game Functions Project, Noah Mulder, v7
 import random
 
 player_hp = 100
@@ -12,7 +12,6 @@ attack_type = ""
 
 player_name = input("What is your characters name?\n")
 
-
 def get_cpuname(cpu_namelist):
     name_index = random.randint(0, len(cpu_namelist) - 1)
     cpu_name = name_index
@@ -21,8 +20,17 @@ def get_cpuname(cpu_namelist):
 def function_three(param1 = "Default Value"):
     pass
 
-def function_four(param1, param2):
-    pass
+def elemental_damage(elemental_attackchosen, elemental_bonus):
+    elemental_attackchosen = input("What element would you like to use? Fire, Ice, or Lightning?\n")
+    elemental_attackchosen = ["Fire", "Ice", "Lightning"]
+    if "Fire":
+        health_taken = 10 * (attack_potency) + (elemental_bonus)
+    elif "Ice":
+        health_taken = 10 * (attack_potency) + (elemental_bonus)
+    elif "Lightning":
+        health_taken = 10 * (attack_potency) + (elemental_bonus)
+    else:
+        print("You didn't choose a valid elemental attack.")
 
 while player_hp or cpu_hp != 0:
     print(f"{player_name} HP: {player_hp}\n")
