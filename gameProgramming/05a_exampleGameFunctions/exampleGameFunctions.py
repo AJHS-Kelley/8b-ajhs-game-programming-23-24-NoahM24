@@ -1,4 +1,4 @@
-# Example Game Functions Project, Noah Mulder, v5
+# Example Game Functions Project, Noah Mulder, v6
 import random
 
 player_hp = 100
@@ -12,13 +12,11 @@ attack_type = ""
 
 player_name = input("What is your characters name?\n")
 
-def function_one():
-    pass
 
 def get_cpuname(cpu_namelist):
     name_index = random.randint(0, len(cpu_namelist) - 1)
     cpu_name = name_index
-    print(cpu_name)
+    return(cpu_name)
 
 def function_three(param1 = "Default Value"):
     pass
@@ -32,13 +30,17 @@ while player_hp or cpu_hp != 0:
     attack_type = input("What type of attack would you like to use? Light or Heavy?\n")
     if "light" or "Light":
         attack_potency = random.randint(1.0, 5.0)
-        print(attack_potency)
+        #print(attack_potency)
         health_taken = 5 * (attack_potency)
         cpu_hp -= health_taken
     elif "heavy" or "Heavy":
         attack_potency = random.randint(1.0, 5.0)
-        print(attack_potency)
+        #print(attack_potency)
         health_taken = 10 * (attack_potency)
         cpu_hp -= health_taken
     else:
         print("Choose of the two attack types.")
+
+def play_again():
+    print('Do you want to fight again? Yes or No?\n')
+    return input().lower().startswith('y')
