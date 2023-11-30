@@ -31,6 +31,7 @@ def elemental_damage(elemental_attackchosen, elemental_bonus):
         health_taken = 10 * (attack_potency) + (elemental_bonus)
     else:
         print("You didn't choose a valid elemental attack.")
+pass
 
 while player_hp or cpu_hp != 0:
     print(f"{player_name} HP: {player_hp}\n")
