@@ -33,7 +33,7 @@ def elemental_damage(elemental_attackchosen, elemental_bonus):
         print("You didn't choose a valid elemental attack.")
 pass
 
-while player_hp or cpu_hp != 0:
+while player_hp or cpu_hp > 0:
     print(f"{player_name} HP: {player_hp}\n")
     print(f"{cpu_name} HP: {cpu_hp}\n")
     attack_type = input("What type of attack would you like to use? Light or Heavy?\n")
