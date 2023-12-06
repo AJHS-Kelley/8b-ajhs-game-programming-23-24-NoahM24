@@ -1,8 +1,8 @@
-# Example Game Functions Project, Noah Mulder, v7
+# Example Game Functions Project, Noah Mulder, v8
 import random
 
 player_hp = 100
-cpu_hp = 100
+cpu_hp = 10000
 player_name = ""
 cpu_name = ""
 attack_potency = 0.0 # Max attack potency is 5
@@ -10,6 +10,7 @@ elemental_attack = None # Elemenatl attacks are Fire, Ice, Lightning
 cpu_namelist = ["Rodrick", "Grag", "Tyu", "Boder", "Poly"]
 attack_type = ""
 
+print("Welcome to beat the crap out of a cpu!\n")
 player_name = input("What is your characters name?\n")
 
 def get_cpuname(cpu_namelist):
@@ -36,7 +37,8 @@ pass
 while player_hp or cpu_hp > 0:
     print(f"{player_name} HP: {player_hp}\n")
     print(f"{cpu_name} HP: {cpu_hp}\n")
-    attack_type = input("What type of attack would you like to use? Light or Heavy?\n")
+
+    input("What type of attack would you like to use? Light or Heavy?\n")
     if "light" or "Light":
         attack_potency = random.randint(1.0, 5.0)
         #print(attack_potency)
