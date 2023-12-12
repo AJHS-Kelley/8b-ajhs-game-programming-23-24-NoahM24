@@ -28,3 +28,22 @@ else:
     print(f"{person2.name} weighs more than {person1.name}.")
 
 person1.classFunction()
+
+# Changing properties After Creation
+print(person1.name)
+person1.name = "Aziah Hill"
+print(person1.name)
+
+# Deleting Properties -- DANGER WILL ROBINSON, DANGER!
+# THIS IS DOES NOT 'RESET' A PROPERTY, IT DELETES IT COMPLETELY.
+print(person1.name)
+del person1.name
+#print(person1)
+
+# Deleting Objects -- Delete them if you're finished with them.
+del person1
+
+# Adding Properties to Objects -- USE CAREFULLY
+person2.weakness = "Kryptonite"
+print(person2)
+print(person2.weakness)
