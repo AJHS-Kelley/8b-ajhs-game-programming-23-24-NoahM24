@@ -1,10 +1,12 @@
-# Object-Oriented Programming, Noah Mulder, v1.1
+# Object-Oriented Programming, Noah Mulder, v1.2
 
 class Person: # Yse PascalCase for ClassNames
     def __init__(self, name, age, weight):
         self.name = name
         self.age = age
         self.weight = weight
+        self.weakness = None
+        self.nemesis = None
 
     # To String Function -- How the object appears as a string.
     def __str__(self):
