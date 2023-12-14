@@ -28,3 +28,9 @@ def is_doubles(roll1, roll2):
         is_doubles = False
     return is_doubles
 
+def is_exploding(roll, size_dice):
+    if roll == size_dice:
+        is_exploding = True
+    else:
+        is_exploding = False
+    return is_exploding
