@@ -1,4 +1,7 @@
-import dice
+import dice, perfmon
+
+start = perfmon.exec_start
+
 
 roll1 = dice.roll(1, 6)
 roll2 = dice.display(1, 6)
@@ -10,4 +13,3 @@ if dice.is_exploding(roll1, 6):
     roll1 += dice.roll(1, 6)
     print(roll1)
 
-    
