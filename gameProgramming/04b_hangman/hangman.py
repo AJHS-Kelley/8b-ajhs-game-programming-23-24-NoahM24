@@ -69,7 +69,7 @@ HANGMAN_BOARD = ['''
 # Pick Word from Dictionary
 def get_randomword(word_dict): # Return a random word from the list.
     word_key = random.choice(list(word_dict.keys()))
-    word_index = random.randint(0, len(word_dict[word_key] - 1))
+    word_index = random.randint(0, len(word_dict[word_key]) - 1)
     return [word_dict[word_key][word_index], word_key]
 
 def display_board(missed_letters, correct_letters, secret_word):
