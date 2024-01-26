@@ -7,20 +7,20 @@ import pygame, sys, random
 from pygame.locals import *
 
 # Create the constants (go ahead and experiment with different values)
-BOARDWIDTH = 4  # number of columns in the board
-BOARDHEIGHT = 4 # number of rows in the board
-TILESIZE = 80
-WINDOWWIDTH = 640
-WINDOWHEIGHT = 480
+BOARDWIDTH = 5  # number of columns in the board
+BOARDHEIGHT = 5 # number of rows in the board
+TILESIZE = 100
+WINDOWWIDTH = 800
+WINDOWHEIGHT = 600
 FPS = 30
 BLANK = None
 
 #                 R    G    B
 BLACK =         (  0,   0,   0)
-WHITE =         (255, 255, 255)
-BRIGHTBLUE =    (  0,  50, 255)
+WHITE =         (  155, 55, 0) # (255, 255, 255)
+BRIGHTBLUE =    (  30,  0, 25) # (  0,  50, 255)
 DARKTURQUOISE = (  3,  54,  73)
-GREEN =         (  0, 204,   0)
+GREEN =         (  100, 150, 100) # (  0, 204,   0)
 
 BGCOLOR = DARKTURQUOISE
 TILECOLOR = GREEN
@@ -303,7 +303,7 @@ def generateNewPuzzle(numSlides):
     lastMove = None
     for i in range(numSlides):
         move = getRandomMove(board, lastMove)
-        slideAnimation(board, move, 'Generating new puzzle...', animationSpeed=int(TILESIZE / 3))
+        slideAnimation(board, move, 'Generating new puzzle...', animationSpeed=int(TILESIZE / 1)) #slideAnimation(board, move, 'Generating new puzzle...', animationSpeed=int(TILESIZE / 3))
         makeMove(board, move)
         sequence.append(move)
         lastMove = move
@@ -324,7 +324,7 @@ def resetAnimation(board, allMoves):
             oppositeMove = LEFT
         elif move == LEFT:
             oppositeMove = RIGHT
-        slideAnimation(board, oppositeMove, '', animationSpeed=int(TILESIZE / 2))
+        slideAnimation(board, oppositeMove, '', animationSpeed=int(TILESIZE / 3))
         makeMove(board, oppositeMove)
 
 
