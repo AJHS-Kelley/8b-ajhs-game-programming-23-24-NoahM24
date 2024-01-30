@@ -21,6 +21,7 @@ while True:
             exit()
     # draw all our elements
     # update everything
+    
     screen.blit(ground_surface(0, 100))
     screen.blit(sky_surface, (0, 0))
     pygame.display.update()
