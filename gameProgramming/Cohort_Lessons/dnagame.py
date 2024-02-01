@@ -88,3 +88,27 @@ def calc_score(rna_sequence: str, rna_time: float) -> int:
         score_multi = 0.5
     score *= score_multi
     return score
+
+def save_score(dna_sequence: str, rna_sequence: str, rna_time: float, score: int) -> None:
+    player_name = input("What is your first name?\n")
+    last_name = input("What is your last name?\n")
+    full_name = player_name + ' ' + last_name
+
+    file_name = "dna_replicationscore" + full_name + ".txt"
+    save_data = open(file_name, "a")
+    # File Modes
+    # "x" mode -- CREATE FILE, IF FILE EXISTS, EXIT WITH ERROR
+    # "w" mode -- CREATE FILE, IF FILE EXISTS, OVERWRITE IT
+    # "a" mode -- CREATE FILE, IF FILE EXISTS, APPEND TO IT
+    save_data.write(f"DNA Sequence: {dna_sequence}\nRNA Sequence: {rna_sequence}")
+    save_data.write(f"Transcription Time: {rna_time}\n")
+    save_data.write(f"Score: {score}\n")
+    save_data.write(f"{full_name}\n")
+    save_data.write(f"{datetime.datetime.now()}\n")
+    save_data.close
+
+dna = gen_dna()
+rna = do_transcription(dna)
+if verify_sequence(dna, rna[0]):
+    score = (calc_score(rna[0], rna[1]))
+    save_score(dna, rna[0], rna[1], score)
