@@ -56,3 +56,35 @@ def verify_sequence(dna_sequence: str, rna_sequence : str) -> bool:
             print("Not sure if bases match correctly. That's kinda cringe.\n")
     return is_match
 
+def calc_score(rna_sequence: str, rna_time: float) -> int:
+    score = 0
+    if rna_time < 1.0:
+        score += 1000000
+    elif rna_time < 5.0:
+        score += 900000
+    elif rna_time < 10.0:
+        score += 600000
+    elif rna_time < 15.0:
+        score += 450000
+    elif rna_time < 20.0:
+        score += 300000
+    elif rna_time < 30.0:
+        score += 200000
+    else:
+        score += 50000
+    
+    score_multi = 0.0
+    if len(rna_sequence) >= 30:
+        score_multi = 5.0
+    elif len(rna_sequence) >= 25:
+        score_multi = 4.0
+    elif len(rna_sequence) >= 20:
+        score_multi = 3.0
+    elif len(rna_sequence) >= 15:
+        score_multi = 2.0
+    elif len(rna_sequence) >= 5:
+        score_multi = 1.0
+    else:
+        score_multi = 0.5
+    score *= score_multi
+    return score
