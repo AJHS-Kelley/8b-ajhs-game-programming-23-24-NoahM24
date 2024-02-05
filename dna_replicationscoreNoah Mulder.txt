@@ -1,0 +1,6 @@
+DNA Sequence: C
+RNA Sequence: G
+Transcription Time: 1.5596938133239746
+Score: 450000.0
+Noah Mulder
+2024-02-05 13:36:29.658295

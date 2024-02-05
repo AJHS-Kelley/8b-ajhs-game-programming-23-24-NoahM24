@@ -104,7 +104,7 @@ def save_score(dna_sequence: str, rna_sequence: str, rna_time: float, score: int
     # "x" mode -- CREATE FILE, IF FILE EXISTS, EXIT WITH ERROR
     # "w" mode -- CREATE FILE, IF FILE EXISTS, OVERWRITE IT
     # "a" mode -- CREATE FILE, IF FILE EXISTS, APPEND TO IT
-    save_data.write(f"DNA Sequence: {dna_sequence}\nRNA Sequence: {rna_sequence}")
+    save_data.write(f"DNA Sequence: {dna_sequence}\nRNA Sequence: {rna_sequence}\n")
     save_data.write(f"Transcription Time: {rna_time}\n")
     save_data.write(f"Score: {score}\n")
     save_data.write(f"{full_name}\n")
