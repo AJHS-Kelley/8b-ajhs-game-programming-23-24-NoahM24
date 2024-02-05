@@ -1,0 +1,5 @@
+DNA Sequence: T
+RNA Sequence: ATranscription Time: 7.60751485824585
+Score: 300000.0
+Ryan Kelley
+2024-02-05 13:00:36.225430

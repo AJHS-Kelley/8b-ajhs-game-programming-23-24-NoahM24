@@ -1,5 +1,9 @@
 # DNA Replication Game, Noah Mulder, v1
 
+# Code is not generating correct number of bases. I requested 5 and it only created 1. 
+# .save() is not being called correctly at end of program. 
+# Program is not exiting correctly, please fix. 
+
 # Import Entire Modules -- Get the whole tool box.
 import time, datetime
 
