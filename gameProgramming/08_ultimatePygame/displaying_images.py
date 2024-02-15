@@ -19,24 +19,25 @@ pygame.init()
 screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption("Weird Snail")
 clock = pygame.time.Clock()
-test_font = pygame.font.Font(None, 50)
+test_font = pygame.font.Font('font/Pixeltype.ttf', 50)
 game_active = True
 start_time = 0
 
-sky_surface = pygame.image.load('img/ultimate_pygame/sky.jpg').convert()
-ground_surface = pygame.image.load('img/ultimate_pygame/ground.jpg').convert()
+sky_surface = pygame.image.load('img/ultimate_pygame/Sky.png').convert()
+ground_surface = pygame.image.load('img/ultimate_pygame/ground.png').convert()
 
 # score_surf = test_font.render('Some Snail', False, 'Red')
 # score_rect = score_surf.get_rect(center = (400, 50))
 
-snail_surface = pygame.image.load('img/ultimate_pygame/snailenemy.png').convert()
-snail_rect = snail_surface.get_rect(topleft = (600, 170))
+snail_surface = pygame.image.load('img/ultimate_pygame/snail1.png').convert()
+snail_rect = snail_surface.get_rect(bottomright = (600, 300))
 
 
-player_surf = pygame.image.load('img/ultimate_pygame/dude.png').convert()
+player_surf = pygame.image.load('img/ultimate_pygame/player_walk_1.png').convert()
 player_rect = player_surf.get_rect(topleft = (80, 210))
 player_gravity = 0
 player_stand = pygame.image.load('img/ultimate_pygame/deadpeter.jfif').convert()
+player_stand_scaled = pygame.transform.scale(player_stand, (200, 400))
 player_stand_rect = player_stand.get_rect(center = (400, 200))
 
 while True:
@@ -47,11 +48,11 @@ while True:
     if game_active:
         if event.type == pygame.MOUSEBUTTONDOWN:
             if player_rect.collidepoint(event.pos) and player_rect.bottom >= 300: 
-                player_gravity = -47
+                player_gravity = -20
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE and player_rect.bottom >= 300:
-                player_gravity = -47
+                player_gravity = -20
     else:
         if event.type == pygame.MOUSEBUTTONDOWN:
             game_active = True
