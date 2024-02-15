@@ -32,11 +32,12 @@ ground_surface = pygame.image.load('img/ultimate_pygame/ground.jpg').convert()
 snail_surface = pygame.image.load('img/ultimate_pygame/snailenemy.png').convert()
 snail_rect = snail_surface.get_rect(topleft = (600, 170))
 
-peter_surf = pygame.image.load('img/ultimate_pygame/deadpeter.jfif').convert
 
 player_surf = pygame.image.load('img/ultimate_pygame/dude.png').convert()
 player_rect = player_surf.get_rect(topleft = (80, 210))
 player_gravity = 0
+player_stand = pygame.image.load('img/ultimate_pygame/deadpeter.jfif').convert()
+player_stand_rect = player_stand.get_rect(center = (400, 200))
 
 while True:
     for event in pygame.event.get():
@@ -84,7 +85,8 @@ while True:
         if snail_rect.colliderect(player_rect):
             game_active = False
     else:
-        screen.fill('White')
+        screen.fill((94, 129, 162))
+        screen.blit(player_stand, player_stand_rect)
 
     pygame.display.update()
     clock.tick(60)
