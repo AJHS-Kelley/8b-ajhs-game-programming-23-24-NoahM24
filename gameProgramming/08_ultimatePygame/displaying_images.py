@@ -17,7 +17,7 @@ def display_score():
 
 pygame.init()
 screen = pygame.display.set_mode((800, 400))
-pygame.display.set_caption("Weird Snail")
+pygame.display.set_caption("Death Trap for the User")
 clock = pygame.time.Clock()
 test_font = pygame.font.Font('font/Pixeltype.ttf', 50)
 game_active = True
@@ -36,8 +36,8 @@ snail_rect = snail_surface.get_rect(bottomright = (600, 300))
 player_surf = pygame.image.load('img/ultimate_pygame/player_walk_1.png').convert()
 player_rect = player_surf.get_rect(topleft = (80, 210))
 player_gravity = 0
-player_stand = pygame.image.load('img/ultimate_pygame/deadpeter.jfif').convert()
-player_stand_scaled = pygame.transform.scale(player_stand, (200, 400))
+player_stand = pygame.image.load('img/ultimate_pygame/homer_nipp.png').convert()
+player_stand_scaled = pygame.transform.scale(player_stand, (600, 400))
 player_stand_rect = player_stand.get_rect(center = (400, 200))
 
 while True:
@@ -87,7 +87,7 @@ while True:
             game_active = False
     else:
         screen.fill((94, 129, 162))
-        screen.blit(player_stand, player_stand_rect)
+        screen.blit(player_stand_scaled, player_stand_rect)
 
     pygame.display.update()
     clock.tick(60)
