@@ -48,6 +48,12 @@ game_name_rect = game_name.get_rect(center = (400, 40))
 game_message = test_font.render('Click screen to run', False, (111, 196, 169))
 game_message_rect = game_message.get_rect(center = (400, 380))
 
+
+#Timer
+obstacle_timer = pygame.USEREVENT + 1
+pygame.time.set_timer(obstacle_timer, 900)
+
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
