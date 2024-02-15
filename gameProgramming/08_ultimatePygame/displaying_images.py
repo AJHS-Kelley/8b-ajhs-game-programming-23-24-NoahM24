@@ -37,7 +37,7 @@ player_surf = pygame.image.load('img/ultimate_pygame/player_walk_1.png').convert
 player_rect = player_surf.get_rect(topleft = (80, 210))
 player_gravity = 0
 player_stand = pygame.image.load('img/ultimate_pygame/homer_nipp.png').convert()
-player_stand_scaled = pygame.transform.scale(player_stand, (600, 400))
+player_stand_scaled = pygame.transform.scale(player_stand, (600, 300))
 player_stand_rect = player_stand.get_rect(center = (400, 200))
 
 while True:
