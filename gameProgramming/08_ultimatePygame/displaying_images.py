@@ -138,7 +138,9 @@ while True:
                 obstacle_rect_list.append(snail_surface.get_rect(bottomright = (randint(900, 1100), 300)))
             else:
                 obstacle_rect_list.append(fly_surf.get_rect(bottomright = (randint(900, 1100), 210)))
-            
+        
+        if event.type == snail_animation_timer:
+            if snail_frame_index == 0: snail_frame_index = 1
     
 
 
