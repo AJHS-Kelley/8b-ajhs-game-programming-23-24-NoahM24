@@ -20,7 +20,7 @@ difficulty = int(input("Please choose a difficulty. Enter 1 for EASY or 2 for HA
 if difficulty == 1:
     pygame.display.set_caption('G.Y.L.A -- EASY')
 else:
-    pygame.display.set_caption('G.Y.L.A -- HARD')
+    pygame.display.set_caption('G.Y.L.A -- CRACKED')
 
 
 
