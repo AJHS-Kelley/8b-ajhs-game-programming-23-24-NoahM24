@@ -18,6 +18,9 @@ Items / Equipment / Objects:
 
 Difficulty Changes:
     -- Lose more money if you lose
+    -- Better AI
+        -- Bigger Bets
+        -- Smarter decisions
 
 Controls:
     -- B - Bets money
