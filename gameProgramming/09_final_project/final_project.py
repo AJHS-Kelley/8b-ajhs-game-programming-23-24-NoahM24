@@ -1,12 +1,28 @@
 # Final Project, Noah Mulder, v0
-import pygame
-from sys import exit
-import random
+import sys, random, pygame
+
+resolution = 1 # 0 = Low Resolution (800, 600), 1 is High Resolution (1920, 1080)
+
+int(input("What resolution would you like?\n 0 for Low\n 1 for High\n"))
+if resolution == 0:
+    x = 800
+    y = 600
+else:
+    x = 1920
+    y = 1080
+screen = pygame.display.set_mode((x, y))
+
 pygame.init()
-screen = pygame.display.set_mode((800, 400))
-pygame.display.set_caption("Death Trap for the User")
 clock = pygame.time.Clock()
-test_font = pygame.font.Font('font/Pixeltype.ttf', 50)
+
+difficulty = int(input("Please choose a difficulty. Enter 1 for EASY or 2 for HARD\n"))
+
+if difficulty == 1:
+    pygame.display.set_caption('G.Y.L.A -- EASY')
+else:
+    pygame.display.set_caption('G.Y.L.A -- HARD')
+
+
 
 while True:
     for event in pygame.event.get():

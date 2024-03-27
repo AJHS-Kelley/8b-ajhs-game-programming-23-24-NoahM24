@@ -1,5 +1,6 @@
 Game Genre / Type: Lose all your money
 Theme: Casino
+Name: GYLA (Gamble Your Life Away)
 
 Win Condition: Beat other player
 Lose Condition: Get beat or fold
