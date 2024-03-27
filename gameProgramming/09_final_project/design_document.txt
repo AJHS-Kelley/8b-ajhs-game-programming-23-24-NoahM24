@@ -15,3 +15,12 @@ Objectives / Enimies / Obstacles:
 
 Items / Equipment / Objects:
     -- The cards
+
+Difficulty Changes:
+    -- Lose more money if you lose
+
+Controls:
+    -- B - Bets money
+    -- D - Add more to your bet
+    -- F - Fold your hand (Lose)
+    -- S - Stand and not bet
