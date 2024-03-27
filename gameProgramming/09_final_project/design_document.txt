@@ -2,7 +2,7 @@ Game Genre / Type: Lose all your money
 Theme: Casino
 
 Win Condition: Beat other player
-Lose Condition: Get beat
+Lose Condition: Get beat or fold
 
 Levels / Screen:
     -- Casino
@@ -12,3 +12,6 @@ Objectives / Enimies / Obstacles:
     -- Beat the other player
     -- The other player is your enemy
     -- Crappy cards
+
+Items / Equipment / Objects:
+    -- The cards
