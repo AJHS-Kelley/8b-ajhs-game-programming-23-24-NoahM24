@@ -14,6 +14,9 @@ screen = pygame.display.set_mode((x, y))
 
 pygame.init()
 clock = pygame.time.Clock()
+game_active = True
+
+starting_screen = pygame.image.load('img/poker/yahoo.png').convert()
 
 difficulty = int(input("Please choose a difficulty. Enter 1 for EASY or 2 for HARD\n"))
 
@@ -28,4 +31,6 @@ while True:
             if event.key == pygame.K_ESCAPE:
                 pygame.quit()
                 exit()
-
+    
+    if game_active:
+        screen.blit(starting_screen, (0,0))
