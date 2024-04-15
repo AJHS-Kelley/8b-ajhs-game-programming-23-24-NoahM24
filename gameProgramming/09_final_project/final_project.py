@@ -11,6 +11,10 @@ else:
     x = 1920
     y = 1080
 screen = pygame.display.set_mode((x, y))
+card_width = 70
+card_height = 100
+white = (255, 255, 255)
+green = (0, 128, 0)
 
 pygame.init()
 clock = pygame.time.Clock()
