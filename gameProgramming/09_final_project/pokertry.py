@@ -2,6 +2,7 @@ import pygame, random
 
 # Initalize Pygame
 pygame.init()
+clock = pygame.time.Clock()
 
 # Constants
 resolution = 1 # 0 = Low Resolution (800, 600), 1 is High Resolution (1920, 1080)
@@ -19,11 +20,18 @@ HEIGHT = 600
 CARD_WIDTH = 70
 CARD_HEIGHT = 100
 starting_screen = pygame.image.load('img/poker/yahoo.png').convert()
+casino_setting = pygame.image.load('img/poker/casino_table.png').convert()
 GREEN = (0, 128, 0)
+
+difficulty = int(input("Please choose a difficulty. Enter 1 for EASY or 2 for HARD\n"))
+
+if difficulty == 1:
+    pygame.display.set_caption('G.Y.L.A -- EASY')
+else:
+    pygame.display.set_caption('G.Y.L.A -- CRACKED')
 
 # Set up the display
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Poker Game")
 
 # Load card images
 card_images = {}
@@ -35,7 +43,7 @@ for suit in ['hearts', 'diamonds', 'clubs', 'spades']:
 game_active = True
 while game_active:
     if game_active:
-        screen.blit(starting_screen, (0,0))
+        screen.blit(casino_setting, (0,0))
 
     # Event handling
     for event in pygame.event.get():
@@ -56,6 +64,7 @@ while game_active:
 
     # Update the display
     pygame.display.flip()
+    clock.tick(60)
 
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
