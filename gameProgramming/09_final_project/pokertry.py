@@ -19,7 +19,7 @@ pygame.display.set_caption("Poker Game")
 card_images = {}
 for suit in ['hearts', 'diamonds', 'clubs', 'spades']:
     for rank in range(1, 14):
-        card_images[(suit, rank)] = pygame.image.load(f'poker/PNG/Cards (large)/card_back.png')
+        card_images[(suit, rank)] = pygame.image.load(f'img/poker/PNG/Cards (large)/card_{suit}_{rank}.png')
 
 # game loop
 running = True
@@ -36,3 +36,18 @@ while running:
     for i, card in enumerate(player_hand):
         card_image = card_images[card]
         screen.blit(card_image, (50 + i * (CARD_WIDTH + 10), HEIGHT - 150))
+
+    # Draw oppenent hand
+    oppenent_hand = [(random.choice(['hearts', 'diamonds', 'clubs', 'spades']), random.randint(1, 13)) for _ in range(5)]
+    for i, card in enumerate(oppenent_hand):
+        card_image = pygame.image.load('img/poker/PNG/Cards (large)/card_back.png')
+        screen.blit(card_image, (50 + i * (CARD_WIDTH + 10), 50))
+
+    # Update the display
+    pygame.display.flip()
+
+    for event in pygame.event.get():
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                pygame.quit()
+                exit()
