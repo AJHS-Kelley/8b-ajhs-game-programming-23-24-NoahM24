@@ -54,13 +54,13 @@ while game_active:
     player_hand = [(random.choice(['hearts', 'diamonds', 'clubs', 'spades']), random.randint(1, 13)) for _ in range(2)]
     for i, card in enumerate(player_hand):
         card_image = card_images[card]
-        screen.blit(card_image, (50 + i * (CARD_WIDTH + 10), HEIGHT - 150))
+        screen.blit(card_image, (300 + i * (CARD_WIDTH + 10), HEIGHT - 150))
 
     # Draw oppenent hand
     oppenent_hand = [(random.choice(['hearts', 'diamonds', 'clubs', 'spades']), random.randint(1, 13)) for _ in range(2)]
     for i, card in enumerate(oppenent_hand):
-        card_image = card_images[card]
-        screen.blit(card_image, (50 + i * (CARD_WIDTH + 10), 50))
+        card_image = pygame.image.load('img/poker/PNG/Cards (large)/card_back.png')
+        screen.blit(card_image, (300 + i * (CARD_WIDTH + 10), 50))
 
     # Update the display
     pygame.display.flip()
