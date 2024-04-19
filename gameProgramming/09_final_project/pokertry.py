@@ -1,4 +1,4 @@
-import pygame, random
+import pygame, random #, time
 
 # Initalize Pygame
 pygame.init()
@@ -6,6 +6,8 @@ clock = pygame.time.Clock()
 
 # Constants
 resolution = 1 # 0 = Low Resolution (800, 600), 1 is High Resolution (1920, 1080)
+
+# Think About:  Creating a list of the cards and then 'dealing' from the list to advoid duplicates. 
 
 int(input("What resolution would you like?\n 0 for Low\n 1 for High\n"))
 if resolution == 0:
@@ -42,6 +44,10 @@ for suit in ['hearts', 'diamonds', 'clubs', 'spades']:
 # game loop
 game_active = True
 while game_active:
+
+
+
+
     if game_active:
         screen.blit(casino_setting, (0,0))
 
@@ -50,16 +56,26 @@ while game_active:
         if event.type == pygame.QUIT:
             running = False
 
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                pygame.quit()
+                exit()
+
+    
+        
+            
+
     # Draw player's hand
     player_hand = [(random.choice(['hearts', 'diamonds', 'clubs', 'spades']), random.randint(1, 13)) for _ in range(2)]
     for i, card in enumerate(player_hand):
         card_image = card_images[card]
         screen.blit(card_image, (300 + i * (CARD_WIDTH + 10), HEIGHT - 150))
+        
 
     # Draw oppenent hand
     oppenent_hand = [(random.choice(['hearts', 'diamonds', 'clubs', 'spades']), random.randint(1, 13)) for _ in range(2)]
     for i, card in enumerate(oppenent_hand):
-        card_image = pygame.image.load('img/poker/PNG/Cards (large)/card_back.png')
+        card_image = pygame.image.load('img/poker/PNG/Cards (large)/card_back.png') # Remove the spaces and () so /cards_large/ for example. 
         screen.blit(card_image, (300 + i * (CARD_WIDTH + 10), 50))
 
     # Middle Deck
@@ -74,12 +90,12 @@ while game_active:
         card_image = pygame.image.load('img/poker/PNG/Cards (large)/card_back.png')
         screen.blit(card_image, (100 + i * (CARD_WIDTH + 10), 270))
 
+    
+    # Debugging Messages 
+    #print(player_hand)  
+
     # Update the display
-    pygame.display.flip()
+    pygame.display.update()
     clock.tick(60)
 
-    for event in pygame.event.get():
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ESCAPE:
-                pygame.quit()
-                exit()
+    
