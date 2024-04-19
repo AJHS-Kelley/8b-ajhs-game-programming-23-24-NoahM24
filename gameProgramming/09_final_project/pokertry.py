@@ -62,6 +62,18 @@ while game_active:
         card_image = pygame.image.load('img/poker/PNG/Cards (large)/card_back.png')
         screen.blit(card_image, (300 + i * (CARD_WIDTH + 10), 50))
 
+    # Middle Deck
+    deck = [(random.choice(['hearts', 'diamonds', 'clubs', 'spades']), random.randint(1, 13)) for _ in range(5)]
+    for i, card in enumerate(deck):
+        card_image = pygame.image.load('img/poker/PNG/Cards (large)/card_back.png')
+        screen.blit(card_image, (200 + i * (CARD_WIDTH + 10), 270))
+
+    # Burn Pile
+    burn_pile = [(random.choice(['hearts', 'diamonds', 'clubs', 'spades']), random.randint(1, 13)) for _ in range(1)]
+    for i, card in enumerate(burn_pile):
+        card_image = pygame.image.load('img/poker/PNG/Cards (large)/card_back.png')
+        screen.blit(card_image, (100 + i * (CARD_WIDTH + 10), 270))
+
     # Update the display
     pygame.display.flip()
     clock.tick(60)
