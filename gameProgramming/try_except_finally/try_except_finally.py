@@ -3,12 +3,14 @@
 
 try: # The code in this block is ALWAYS executed
     my_variable = 1
-    print(my_variabl)
-except NameError: # This code will run if there is an error (exception) raised.
+    print(my_variable)
+    my_string = "Five"
+    print(float(my_string))
+except ValueError: # This code will run if there is an error (exception) raised.
     print("There is an incorrect variable in your code. Fix it dummy.")
-except:
-    print("Soemthing else has gone worng.")
+#except:
+    #print("Something else has gone wrong.")
 else: # This code runs when there are NO ERRORS
     print("Good job. Your code worked correctly for once. =)\n")
 finally: # THIS CODE ALWAYS RUNS, IT'S LIKE THE TERMINATOR
-    print("Get to the choppa!")
+    print("This is not power of your creation, b###h")
