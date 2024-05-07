@@ -39,7 +39,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 card_images = {}
 for suit in ['hearts', 'diamonds', 'clubs', 'spades']:
     for rank in range(1, 14):
-        card_images[(suit, rank)] = pygame.image.load(f'img/poker/PNG/Cards (large)/card_{suit}_{rank}.png')
+        card_images[(suit, rank)] = pygame.image.load(f'img/poker/PNG/card_large/card_{suit}_{rank}.png')
 
 # game loop
 game_active = True
@@ -75,19 +75,19 @@ while game_active:
     # Draw oppenent hand
     oppenent_hand = [(random.choice(['hearts', 'diamonds', 'clubs', 'spades']), random.randint(1, 13)) for _ in range(2)]
     for i, card in enumerate(oppenent_hand):
-        card_image = pygame.image.load('img/poker/PNG/Cards (large)/card_back.png') # Remove the spaces and () so /cards_large/ for example. 
+        card_image = pygame.image.load('img/poker/PNG/card_large/card_back.png') # Remove the spaces and () so /cards_large/ for example. 
         screen.blit(card_image, (300 + i * (CARD_WIDTH + 10), 50))
 
     # Middle Deck
     deck = [(random.choice(['hearts', 'diamonds', 'clubs', 'spades']), random.randint(1, 13)) for _ in range(5)]
     for i, card in enumerate(deck):
-        card_image = pygame.image.load('img/poker/PNG/Cards (large)/card_back.png')
+        card_image = pygame.image.load('img/poker/PNG/card_large/card_back.png')
         screen.blit(card_image, (200 + i * (CARD_WIDTH + 10), 270))
 
     # Burn Pile
     burn_pile = [(random.choice(['hearts', 'diamonds', 'clubs', 'spades']), random.randint(1, 13)) for _ in range(1)]
     for i, card in enumerate(burn_pile):
-        card_image = pygame.image.load('img/poker/PNG/Cards (large)/card_back.png')
+        card_image = pygame.image.load('img/poker/PNG/card_large/card_back.png')
         screen.blit(card_image, (100 + i * (CARD_WIDTH + 10), 270))
 
     
