@@ -7,7 +7,8 @@ clock = pygame.time.Clock()
 # Constants
 resolution = 1 # 0 = Low Resolution (800, 600), 1 is High Resolution (1920, 1080)
 
-# Think About:  Creating a list of the cards and then 'dealing' from the list to advoid duplicates. 
+# Think About:  Creating a list of the cards and then 'dealing' from the list to advoid duplicates.
+card_deck = {}
 
 int(input("What resolution would you like?\n 0 for Low\n 1 for High\n"))
 if resolution == 0:
